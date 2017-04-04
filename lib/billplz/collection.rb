@@ -1,6 +1,6 @@
 module Billplz
   class Collection < Model
-    self.api_url = "#{Billplz.configuration.api_url}/api/v3/collections"
+    self.api_url = "https://billplz-staging.herokuapp.com/api/v3/collections"
 
     def create
       requires!(@payload, :title)
