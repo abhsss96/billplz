@@ -9,7 +9,8 @@ module Billplz
 
     def options
       hash = Hash.new
-      %w[api_key http_timeout mode api_url].map{|key| hash[key.to_sym] = send(key) }
+      %w[api_key http_timeout mode].map{|key| hash[key.to_sym] = send(key) }
+      binding.pry
       hash
     end
   end
