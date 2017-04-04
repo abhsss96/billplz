@@ -1,6 +1,6 @@
 module Billplz
   class Bill < Model
-    self.api_url = 'https://www.billplz.com/api/v3/bills'
+    self.api_url = "#{Billplz.configuration.api_url}/api/v3/bills"
 
     def create
       requires!(@payload, :collection_id, :email, :name, :amount, :callback_url)
